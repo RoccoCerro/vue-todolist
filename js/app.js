@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      inputValue: "",
       todos: [
         {
           text: 'Comprare il pane',
@@ -26,6 +27,13 @@ createApp({
   methods: {
     deleteTodo(index){
       this.todos.splice(index, 1)
+    },
+    addTodo(){
+      this.todos.push({
+        text: this.inputValue,
+        done: false,
+      })
     }
   }
 }).mount('#app')
+

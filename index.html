@@ -20,7 +20,9 @@
       <div class="container">
         <div class="card">
           <div class="card-header">
-            <input type="text">
+            <input v-model.trim="inputValue" @keydown.enter="addTodo" type="text">
+            <button @click="addTodo">Aggiungi</button>
+            <div>{{inputValue}}</div>
           </div>
           <div class="card-body">
             <ul class="todo-list">
