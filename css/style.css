@@ -26,10 +26,6 @@ ul,li,menu{
 }
 
 /* STYLE HEADER */
-.card{
-  width: 100%;
-}
-
 .page-header{
   text-align: center;
   background-color: #293133;
@@ -38,6 +34,10 @@ ul,li,menu{
 }
 
 /* STYLE CARD */
+.card{
+  width: 100%;
+}
+
 .card-header{
   background-color: #293133;
   border-top-left-radius: 10px;
@@ -58,12 +58,12 @@ ul,li,menu{
   & button{
     width: 100px;
     font-weight: bold;
-    margin-left: 5px;
+    margin-left: 15px;
+
   }
 }
 
 .card-body{
-  /* padding: 20px 0; */
   line-height: 25px;
   background-color: #d6cecc;
   border-bottom-left-radius: 10px;
@@ -72,7 +72,6 @@ ul,li,menu{
 
 .card-body, .card-header{
   padding: 20px 25px;
-  /* border-radius: 10px; */
 }
 
 .todo-item{
@@ -80,6 +79,10 @@ ul,li,menu{
   gap: 5px;
   justify-content: space-between;
   cursor: pointer;
+}
+
+.delete-todo{
+  margin-right: 25px;
 }
 
 /* UTILITY */
