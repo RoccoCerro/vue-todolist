@@ -32,7 +32,8 @@ createApp({
       this.todos.push({
         text: this.inputValue,
         done: false,
-      })
+      });
+      this.inputValue = "";
     },
     todoThrough(index){
       if(this.todos[index].done === true){
