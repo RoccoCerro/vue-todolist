@@ -14,27 +14,37 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
   <div id="app">
+    <!-- header -->
     <header class="page-header">
       <h1>TODOLIST VUE</h1>
     </header>
+    <!-- main -->
     <main class="page-main">
       <div class="container">
+        <!-- card -->
         <div class="card">
+          <!-- card header -->
           <div class="card-header">
             <input v-model.trim="inputValue" @keydown.enter="addTodo" type="text">
             <button @click="addTodo">Aggiungi</button>
           </div>
+          <!-- card body -->
           <div class="card-body">
+            <!-- todo list se ci sono todo -->
             <ul class="todo-list" v-if="todos.length !== 0">
+              <!-- todo item -->
               <li v-for="(todo, i) in todos" class="todo-item">
+                <!-- todo -->
                 <div @click="todoThrough(i)" class="text-todo" :class="todo.done === true ? 'tick' : '' ">
                   {{todo.text}}
                 </div>
+                <!-- delete todo -->
                 <div @click="deleteTodo(i)" class="delete-todo">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
               </li>
             </ul>
+            <!-- se non ci sono todo -->
             <div v-else>
               <p>Non ci sono cose da fare</p>
             </div>
