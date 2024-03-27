@@ -19,7 +19,6 @@ ul,li,menu{
 /* LAYOUT */
 .container{
   max-width: 700px;
-  height: 100vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -27,18 +26,53 @@ ul,li,menu{
 }
 
 /* STYLE HEADER */
+.card{
+  width: 100%;
+}
+
 .page-header{
   text-align: center;
+  background-color: #293133;
+  color: #d6cecc;
+  padding: 25px 0;
 }
 
 /* STYLE CARD */
 .card-header{
-  padding: 20px 0;
+  background-color: #293133;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  & input{
+    width: calc(100% - 120px);
+    outline: none;
+    padding: 0 10px;
+  }
+
+  & button, input{
+    border-radius: 999px;
+    height: 25px;
+    border: none;
+  }
+
+  & button{
+    width: 100px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
 }
 
 .card-body{
-  padding: 20px 0;
+  /* padding: 20px 0; */
   line-height: 25px;
+  background-color: #d6cecc;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card-body, .card-header{
+  padding: 20px 25px;
+  /* border-radius: 10px; */
 }
 
 .todo-item{
