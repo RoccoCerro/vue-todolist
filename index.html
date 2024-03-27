@@ -26,8 +26,8 @@
           </div>
           <div class="card-body">
             <ul class="todo-list">
-              <li v-for="(todo, i) in todos" class="todo-item" :class="todo.done === true ? 'tick' : '' ">
-                <div class="text-todo">
+              <li v-for="(todo, i) in todos" class="todo-item">
+                <div @click="todoThrough(i)" class="text-todo" :class="todo.done === true ? 'tick' : '' ">
                   {{todo.text}}
                 </div>
                 <div @click="deleteTodo(i)" class="delete-todo">

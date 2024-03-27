@@ -33,6 +33,14 @@ createApp({
         text: this.inputValue,
         done: false,
       })
+    },
+    todoThrough(index){
+      if(this.todos[index].done === true){
+        this.todos[index].done = false
+      }
+      else{
+        this.todos[index].done = true
+      }
     }
   }
 }).mount('#app')
