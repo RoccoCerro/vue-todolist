@@ -25,7 +25,7 @@
             <button @click="addTodo">Aggiungi</button>
           </div>
           <div class="card-body">
-            <ul class="todo-list">
+            <ul class="todo-list" v-if="todos.length !== 0">
               <li v-for="(todo, i) in todos" class="todo-item">
                 <div @click="todoThrough(i)" class="text-todo" :class="todo.done === true ? 'tick' : '' ">
                   {{todo.text}}
@@ -35,6 +35,9 @@
                 </div>
               </li>
             </ul>
+            <div v-else>
+              <p>Non ci sono cose da fare</p>
+            </div>
           </div>
         </div>
       </div>

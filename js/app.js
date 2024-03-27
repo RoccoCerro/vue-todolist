@@ -29,11 +29,14 @@ createApp({
       this.todos.splice(index, 1)
     },
     addTodo(){
-      this.todos.push({
-        text: this.inputValue,
-        done: false,
-      });
-      this.inputValue = "";
+      if(this.inputValue !== ""){
+        const ValueUpCase = this.inputValue[0].toUpperCase() + this.inputValue.slice(1) 
+        this.todos.push({
+          text: ValueUpCase,
+          done: false,
+        });
+        this.inputValue = "";
+      }
     },
     todoThrough(index){
       if(this.todos[index].done === true){
