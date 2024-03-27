@@ -41,6 +41,12 @@ ul,li,menu{
   line-height: 25px;
 }
 
+.todo-item{
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
 /* UTILITY */
 .tick{
   text-decoration: line-through;
