@@ -1,3 +1,11 @@
+/* FONT */
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* RESET */
 *{
   margin: 0;
   padding: 0;
@@ -7,4 +15,21 @@
 ul,li,menu{
   list-style: none;
 }
+
+/* LAYOUT */
+.container{
+  max-width: 700px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+/* STYLE HEADER */
+.page-header{
+  text-align: center;
+}
+
+/* STYLE CARD */
 
