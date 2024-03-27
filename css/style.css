@@ -32,4 +32,16 @@ ul,li,menu{
 }
 
 /* STYLE CARD */
+.card-header{
+  padding: 20px 0;
+}
 
+.card-body{
+  padding: 20px 0;
+  line-height: 25px;
+}
+
+/* UTILITY */
+.tick{
+  text-decoration: line-through;
+}
